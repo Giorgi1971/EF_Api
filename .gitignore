@@ -1,0 +1,12 @@
+.vs
+bin
+obj
+*.sln
+.DS_Store
+.idea/
+.vscode/
+C_sharp/
+MyApp/
+Week1/
+Week2/
+.fake
