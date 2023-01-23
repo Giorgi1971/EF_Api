@@ -12,16 +12,18 @@ namespace T_Api_Time.Data
 
         public DbSet<Student> Students { get; set; } = null!;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(
-                    "Server = localhost; " +
-                    "Database = ToDoNewDb; " +
-                    "User Id = sa ; " +
-                    "Password = HardT0Gue$$Pa$$word; " +
-                    "Encrypt=False"
-                );
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    // "Server=localhost; Database = NNToApiDoDb; User Id=sa; Password=HardT0Gue$$Pa$$word; Trusted_Connection=True; Encrypt=False;"
+        //    optionsBuilder.UseSqlServer(
+        //            "Server = localhost; " +
+        //            "Database = ToDoNewDb; " +
+        //            "User Id = sa ; " +
+        //            "Password = HardT0Gue$$Pa$$word; " +
+        //            "Encrypt=False"
+
+        //        );
+        //}
 
     }
 }

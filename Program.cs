@@ -1,4 +1,4 @@
-﻿
+﻿using T_Api_Time.Models;
 using T_Api_Time.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
@@ -12,10 +12,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ---????????????????????/--- ეს რატომ მიწერია არ ვიცი, სწორია???
+// ეს ამოიღებს დატაბეიზის სტრინგს აპპსეტტინგ ფაილიდან
 builder.Services.AddDbContext<T_Api_TimeContext>(
-                    options => options.UseSqlServer("DefaultString"));
-
+                    options => options.UseSqlServer(
+                        builder.Configuration.GetConnectionString("T_Api_TimeContext")
+                        )
+                    );
 
 var app = builder.Build();
 
@@ -33,4 +35,4 @@ app.MapControllers();
 app.Run();
 
 // დაწყება      23:21
-// დამთავრება   
+// დამთავრება   მეორე დღის 15:27 :( .
